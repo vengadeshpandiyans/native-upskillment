@@ -17,6 +17,7 @@ const countryCodes = [
     { code: '+1', image: require('../../assets/usFlag.png') },
     { code: '+91', image: require('../../assets/indiaFlag.png') },
     { code: '+44', image: require('../../assets/canadaFlag.png') },
+    { code: '+44', image: require('../../assets/canadaFlag.png') },
 ];
 
 const Register = () => {
@@ -70,11 +71,13 @@ const Register = () => {
         setRegisterData({
             ...registerData,
             error: errors
+
         });
         return isValid;
     };
 
     // Resister Form Reset
+
     const resetRegisterForm = () => {
         setRegisterData({
             name: '',
