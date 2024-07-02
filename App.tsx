@@ -1,12 +1,18 @@
 import React from 'react';
 import Register from './blocks/registerScreen';
+import Merchant from './blocks/merchantScreen';
+import NavigationRoute from './navigator';
 
 
 function App(): React.JSX.Element {
-  
+
 
   return (
-      <Register/>    
+    <>
+    <NavigationRoute/>
+    </>
+    // <Register/>  
+    // // <Merchant />
   );
 }
 

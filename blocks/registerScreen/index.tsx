@@ -11,6 +11,7 @@ import MobileInput from '../../components/mobileInput';
 import CustomInputField from '../../components/textInput';
 import { ERRORS } from '../../utils';
 import { styles } from './style';
+import Title from '../../components/title';
 
 
 const countryCodes = [
@@ -104,6 +105,7 @@ const Register = () => {
     return (
         <View style={styles.container}>
             <View style={styles.root}>
+            <Title title="Register Screen" />
                 <View style={styles.firstSection}>
                     <Image source={require('../../assets/Group.png')} />
                     <Text style={styles.title}>
