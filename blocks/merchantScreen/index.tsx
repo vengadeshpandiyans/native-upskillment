@@ -33,36 +33,36 @@ const Merchant = () => {
 
     // Handlers for incrementing and decrementing the counter
     const handleIncrement = (id: any) => {
-        
+
         setListedFoods(prevData => {
             const newData = prevData.map(item =>
-              item.id === id ? { ...item, count: item.count + 1 } : item
+                item.id === id ? { ...item, count: item.count + 1 } : item
             );
-            
+
             // Find the item with the updated count
             const updatedItem = newData.find(item => item.id === id);
-            
+
             // Set the global count to the updated item's count
             setCount(updatedItem.count);
-      
+
             return newData;
-          });
+        });
     };
 
     const handleDecrement = (id: any) => {
         setListedFoods(prevData => {
             const newData = prevData.map(item =>
-              item.id === id ? { ...item, count: item.count - 1 } : item
+                item.id === id ? { ...item, count: item.count - 1 } : item
             );
-            
+
             // Find the item with the updated count
             const updatedItem = newData.find(item => item.id === id);
-            
+
             // Set the global count to the updated item's count
             setCount(updatedItem.count);
-      
+
             return newData;
-          });
+        });
     };
 
     const handleTab = (id: any, title: string, icon: any) => {
@@ -79,11 +79,11 @@ const Merchant = () => {
                         style={styles.ratingIcon}
                         resizeMode="contain"
                     />
-                    <Text>
+                    <Text style={{ color: "#000000", fontSize: 14 }}>
                         {title}
                     </Text>
                 </View>
-                <Text>{subTitle}</Text>
+                <Text style={{ color: "#000000", fontSize: 12 }}>{subTitle}</Text>
             </SafeAreaView>
         );
     };
@@ -107,6 +107,7 @@ const Merchant = () => {
             )}
         </TouchableOpacity>
     );
+
 
     return (
         <View style={styles.container}>
@@ -171,7 +172,7 @@ const Merchant = () => {
                     )}
                 </View>
 
-                <View style={{marginBottom: 16}}>
+                <View style={{ marginBottom: 16 }}>
                     <FlatList
                         data={listedFoods}
                         keyExtractor={(item: any) => item?.id}
@@ -186,10 +187,12 @@ const Merchant = () => {
                                 count={item?.count}
                                 handleDecrement={() => handleDecrement(item.id)}
                                 handleIncrement={() => handleIncrement(item.id)}
+                                footTextStyles={styles.footTextStyles}
                             />
                         )}
                         showsVerticalScrollIndicator={false}
                         ItemSeparatorComponent={separator}
+                        
                     />
                 </View>
 
@@ -218,7 +221,6 @@ const Merchant = () => {
         </View>
     );
 };
-
 
 
 export default Merchant;

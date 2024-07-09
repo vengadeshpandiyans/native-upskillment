@@ -32,9 +32,10 @@ const CustomInputField = (props: any) => {
         numberOfLines={numberOfLines}
         maxLength={maxLength}
         style={[styles.rootStyle,
-          multiline ? styles.multilineStyle : styles.inputStyle,
-          isError && styles.errorStyle,
-          value !== '' && styles.marginBottom,
+        multiline ? styles.multilineStyle : styles.inputStyle,
+        isError && styles.errorStyle,
+        value !== '' && styles.marginBottom,
+          styleProps
         ]}
         editable={editable}
         inputMode={inputMode}

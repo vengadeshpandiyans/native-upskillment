@@ -1,3 +1,7 @@
+import Home from "../blocks/home";
+import Merchant from "../blocks/merchantScreen";
+import Register from "../blocks/registerScreen";
+
 export const ERRORS = {
   required: 'Please fill the Field',
   validPincode: 'Pincode is invalid',
@@ -61,6 +65,80 @@ export const tabData = [
 ];
 
 
+export const FOOD_DATA = [
+
+  {
+    id: 1,
+    icon: require('../assets/briyani.png'),
+    title: 'Briyani',
+  },
+  {
+    id: 2,
+    icon: require('../assets/pizza.png'),
+    title: 'Pizza',
+  },
+  {
+    id: 3,
+    icon: require('../assets/salad.png'),
+    title: 'Salad',
+  },
+  {
+    id: 4,
+    icon: require('../assets/chicken.png'),
+    title: 'Sandwich',
+  },
+  {
+    id: 5,
+    icon: require('../assets/burger.png'),
+    title: 'Burger',
+  },
+];
+
+export const FOOD_CARD_DATA = [
+
+  {
+    id: 1,
+    icon: require('../assets/briyani.png'),
+    title: 'Hyderabad Briyani',
+    rating: 5,
+    distance: '2.5km',
+    duration: '20 min delay'
+
+  },
+  {
+    id: 2,
+    icon: require('../assets/arabic-biryani.png'),
+    title: 'Arabian Briyani',
+    rating: 3,
+    distance: '2.5km',
+    duration: '20 min delay'
+  },
+  {
+    id: 3,
+    icon: require('../assets/mutton-biryani.png'),
+    title: 'Mutton Briyani',
+    rating: 4,
+    distance: '2.5km',
+    duration: '20 min delay'
+  },
+  {
+    id: 4,
+    icon: require('../assets/chicken.png'),
+    title: 'Sandwich',
+    rating: 4,
+    distance: '2.5km',
+    duration: '20 min delay'
+  },
+  {
+    id: 5,
+    icon: require('../assets/burger.png'),
+    title: 'Burger',
+    rating: 5,
+    distance: '2.5km',
+    duration: '20 min delay'
+  },
+];
+
 export const MAPPING_ITEMS = [
   {
     id: 1,
@@ -115,5 +193,33 @@ export const MAPPING_ITEMS = [
     subTitle: '2 Bucket Chicken Biriyani, 2 White Rice Bowl, 1 lt Coke',
     footText: '$32.00',
     count: 0
+  },
+];
+
+export const drawerData = [
+  {
+    id: 1,
+    name: 'Home',
+    icon: require('../assets/home.png'),
+    route: Home,
+  },
+  {
+    id: 2,
+    name: 'Register',
+    icon: require('../assets/verify.png'),
+    route: Register,
+  },
+  {
+    id: 3,
+    name: 'Mechant',
+    icon: require('../assets/store.png'),
+    route: Merchant,
+  },
+  
+  {
+    id: 4,
+    name: 'Logout',
+    icon: require('../assets/logout.png'),
+    route: 'Home',
   },
 ];

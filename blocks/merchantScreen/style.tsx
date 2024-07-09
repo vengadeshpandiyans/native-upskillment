@@ -154,6 +154,11 @@ export const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: '600',
         color: '#c8361e',
+    },
+    footTextStyles:{
+        color:'#feac00',
+        fontSize:12,
+        fontWeight:'400'
     }
 
 
